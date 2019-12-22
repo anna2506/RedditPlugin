@@ -6,9 +6,7 @@ import javax.swing.*;
 
 
 public class Reddit extends AnAction {
-  public Reddit(){
-    super(null, null, new ImageIcon(Reddit.class.getClassLoader().getResource("images/reddit.png")));
-  }
+  public Reddit(){ }
   @Override
   public void actionPerformed(AnActionEvent event) {
     String redditSite = "https://www.reddit.com/";

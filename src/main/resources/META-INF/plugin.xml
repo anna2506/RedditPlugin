@@ -15,13 +15,14 @@
     -->
 
     <extensions defaultExtensionNs="com.intellij">
-        <!-- Add your extensions here -->
+        <toolWindow id="Reddit" icon="/images.reddit.png" anchor="right" factoryClass="BrowserWindow"/>
     </extensions>
 
     <actions>
-        <group id="MyPlugin.SampleMenu" text="Greeting" description="Greeting menu">
-        <add-to-group group-id="MainMenu" anchor="last"/>
-        <action id="MyPlugin.Textboxes" class="HelloAction" text="Hello" description="Says hello"/>
-        <action id="RedditPlugin" class="Reddit" text="Reddit" description="Show website"/>
+        <group id="RedditPlugin">
+            <add-to-group group-id="HelpMenu" anchor="first"/>
+            <action class="Reddit" id="VisitReddit" text="Show me the posts"
+                    description="I need some posts"/>
+        </group>
     </actions>
 </idea-plugin>
