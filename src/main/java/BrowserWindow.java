@@ -12,8 +12,17 @@ import java.awt.event.ComponentListener;
 
 
 public class BrowserWindow implements ToolWindowFactory {
-  public BrowserWindow(){}
+  /**
+   * Constructor
+   */
+  public BrowserWindow(){
+
+  }
   @Override
+  /**
+   * @param project Project
+   * @param toolWindow ToolWindow
+   */
   public void createToolWindowContent( Project project, ToolWindow toolWindow) {
     final ToolWindowManager manager = ToolWindowManager.getInstance(project);
     ContentFactory contentFactory = ContentFactory.SERVICE.getInstance();
