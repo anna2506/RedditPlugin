@@ -8,7 +8,10 @@ import java.awt.*;
  */
 public class BrowserPanel extends JPanel {
   private BrowserView browserView;
-  public JButton buttonGo;
+  public JButton today;
+  public JButton week;
+  public JButton month;
+  public JButton year;
   /**
    * @param browserView BrowserView
    */
@@ -23,27 +26,57 @@ public class BrowserPanel extends JPanel {
 
     topControlPanel.setLayout(topControlPanelLayout);
 
-    buttonGo = new JButton("");
-    buttonGo.setPreferredSize(new Dimension(40, 30));
+    today = new JButton("Today");
+    week = new JButton("Week");
+    month = new JButton("Month");
+    year = new JButton("Year");
+    //today.setPreferredSize(new Dimension(40, 30));
 
-    topControlPanel.add(buttonGo);
+    topControlPanel.add(today);
+    topControlPanel.add(week);
+    topControlPanel.add(month);
+    topControlPanel.add(year);
 
     GridBagConstraints gridBagConstraints = new GridBagConstraints();
     gridBagConstraints.fill = GridBagConstraints.BOTH;
     gridBagConstraints.gridwidth = 1;
     gridBagConstraints.weightx = 0;
     gridBagConstraints.weighty = 0;
-    topControlPanelLayout.setConstraints(buttonGo, gridBagConstraints);
+    topControlPanelLayout.setConstraints(today, gridBagConstraints);
+    topControlPanelLayout.setConstraints(week, gridBagConstraints);
+    topControlPanelLayout.setConstraints(month, gridBagConstraints);
+    topControlPanelLayout.setConstraints(year, gridBagConstraints);
 
-    buttonGo.setEnabled(true);
+    today.setEnabled(true);
+    week.setEnabled(true);
+    month.setEnabled(true);
+    year.setEnabled(true);
 
-    buttonGo.addActionListener(event -> this.webBrowserLoad());
+    today.addActionListener(actionEvent -> this.webTodayTop());
+    week.addActionListener(actionEvent -> this.webWeekTop());
+    month.addActionListener(actionEvent -> this.webMonthTop());
+    year.addActionListener(actionEvent -> this.webYearTop());
 
     return topControlPanel;
   }
 
-  private void webBrowserLoad(){
-    String redditSite = "https://www.reddit.com/";
+  private void webTodayTop(){
+    String redditSite = "https://www.reddit.com/top/?t=day";
+    browserView.load(redditSite);
+  }
+
+  private void webWeekTop(){
+    String redditSite = "https://www.reddit.com/top/?t=week";
+    browserView.load(redditSite);
+  }
+
+  private void webMonthTop(){
+    String redditSite = "https://www.reddit.com/top/?t=month";
+    browserView.load(redditSite);
+  }
+
+  private void webYearTop(){
+    String redditSite = "https://www.reddit.com/top/?t=year";
     browserView.load(redditSite);
   }
 
@@ -78,7 +111,7 @@ public class BrowserPanel extends JPanel {
 
       validate();
       repaint();
-      buttonGo.setEnabled(true);
+      today.setEnabled(true);
     });
   }
 }
