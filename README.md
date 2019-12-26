@@ -11,5 +11,5 @@ The plugin allows you to get the most popular Reddit posts of the day/week/month
 ## Examples
 ![alt text](pictures/1.png "Today") 
 ## Collaborators
-- Anna Doschenko
-- Ekaterina Ladokhina
+- Anna Doschenko М3307
+- Ekaterina Ladokhina М3307
