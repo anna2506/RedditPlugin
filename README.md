@@ -9,7 +9,7 @@ The plugin allows you to get the most popular Reddit posts of the day/week/month
 4. Choose one of the options (day/week/month/year)
 5. Good job!
 ## Examples
-![alt text](pictures/1.png "Today") 
+![alt text](https://d.radikal.ru/d43/1912/02/ad2ee1464750.png "Today") 
 ## Collaborators
 - Anna Doschenko М3307
 - Ekaterina Ladokhina М3307
